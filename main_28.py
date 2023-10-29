@@ -94,7 +94,7 @@ def test():
             axs.imshow(img_val,cmap='gray')
             axs.axis('off')
             name = 'X_train[' + str(num) + ']'
-            fig.savefig(r"C:\Users\Theon\Downloads\Git_rep\Flask_imp\Number_recognizer_1.1/static/mnist_img/{0}.png".format(name))
+            fig.savefig(r"____/static/mnist_img/{0}.png".format(name))
             img_test = Image.open(i_img_name)
         return rt('test.html', title='Testing Web', link='index', linklabel=label, list_img=list_img, img=img_name,pred=pred,value=value, version=version)
     else:   
