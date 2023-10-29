@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Implementation Website</title>
+    </head>
+    <body>
+        <h1>Using Tensorflow Version {{ version }}</h1>
+        model summary
+        <form method="POST" action="{{ url_for('index') }}">
+            <div>
+              <label for="file">Choose file to upload</label>
+              <input type="file" id="file" name="file"/>
+            </div>
+            <div>
+              <button>Submit</button>
+            </div>
+          </form>
+        <br>
+        prediction {{ pred }}
+        <br>
+        {{ img }}
+        <br>
+        <img src='{{ url_for('static', filename=img)}}' height="280" width="280">
+    </body>
+</html>

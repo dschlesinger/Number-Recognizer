@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block link %}
+
+<h1>Using Tensorflow Version {{ version }}</h1>
+<form method="POST" action="{{ url_for('test') }}">
+    <div>
+        <label for="number">Choose what image to run</label>
+        <input type="number" id="number" name="number"/>
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+</form>
+<br>
+{% if img %}
+<body>prediction {{ pred }}</body>
+<br>
+<img src='{{ url_for('static', filename=img)}}' height="280" width="280">
+{% else %}
+<body>No image choosen</body>
+{% endif %}
+<br>
+</body>
+
+
+<body id="side">Example images</body>
+{% for img in list_img %}
+        <br>
+        <img src="{{ url_for('static', filename=img)}}" height="20" width="20" id="side">
+        <body>{{img}}</body>
+{% endfor %}
+{% endblock %}

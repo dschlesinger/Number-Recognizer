@@ -1,0 +1,14 @@
+* {
+    background-color: lightblue;
+}
+#main {
+    text-align:center;
+}
+
+#small {
+    font-size: smaller;
+}
+
+#side {
+    margin-left:0px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/style.css">
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Unamed Website</title>
+        {% endif %}
+    </head>
+    <body>
+        <div id="main">
+            <a href='{{url_for(link)}}'>{{ linklabel }}</a>
+        </div>
+        <div id='side'>
+            {% block link %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
